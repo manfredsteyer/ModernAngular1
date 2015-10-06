@@ -1,0 +1,1 @@
+{"version":3,"sources":["buchen/buchen.js"],"names":[],"mappings":";;;MAAa,gBAAgB;;;;;;;AAAhB,sBAAgB,YAAhB,gBAAgB;8BAAhB,gBAAgB","file":"buchen/buchen.js","sourcesContent":["export class BuchenController {\r\n}"],"sourceRoot":"/source/"}

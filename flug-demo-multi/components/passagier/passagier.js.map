@@ -1,0 +1,1 @@
+{"version":3,"sources":["passagier/passagier.js"],"names":[],"mappings":";;;MAAa,mBAAmB;;;;;;;AAAnB,yBAAmB,YAAnB,mBAAmB;8BAAnB,mBAAmB","file":"passagier/passagier.js","sourcesContent":["export class PassagierController {\r\n}"],"sourceRoot":"/source/"}

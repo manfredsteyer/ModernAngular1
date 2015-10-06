@@ -1,0 +1,69 @@
+<div>
+    <div ng-show="passagierEdit.exitWarning.show" class="alert alert-warning">
+        <div>
+        Daten wurden nicht gespeichert! Trotzdem Maske verlassen?
+        </div>
+        <div>
+            <a href="javascript:void(0)" ng-click="passagierEdit.exitWarning.resolve()" class="btn btn-danger">Ja</a>
+            <a href="javascript:void(0)" ng-click="passagierEdit.exitWarning.reject()" class="btn btn-default">Nein</a>
+            
+        </div>
+    </div>
+
+    
+    
+    <div ng-show="passagierEdit.message" class="alert alert-warning">
+        <div style="float:right">
+            <a href="javascript:void(0)" ng-click="passagierEdit.message = ''"><span class="glyphicon glyphicon-remove"></span></a>
+        </div>
+        <div>{{ passagierEdit.message }}</div>
+    </div>
+
+    <h4>Passagier Detail</h4>
+    <hr />
+
+    <form name="form">
+
+        <div class="form-group">
+            <div>
+                <label for="Vorname">Vorname</label>
+            </div>
+            <div>
+                <input class="form-control" ng-model="passagierEdit.passagier.vorname" name="Vorname" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div>
+                <label for="Name">Name</label>
+            </div>
+            <div>
+                <input class="form-control" ng-model="passagierEdit.passagier.name" name="Name" />
+            </div>
+        </div>
+
+
+            <div class="form-group">
+                <div>
+                    <label for="Geburtsdatum">Geburtstag</label>
+                </div>
+                <div>
+                    <input class="form-control" ng-model="passagierEdit.passagier.geburtsdatum" name="Geburtsdatum" />
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="PassagierStatus">Status</label>
+                </div>
+                <div>
+                    <input class="form-control" ng-model="passagierEdit.passagier.passagierStatus" name="PassagierStatus" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="button" class="btn btn-default" ng-click="passagierEdit.save()" value="Speichern" />
+            </div>
+</form>
+</div>

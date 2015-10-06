@@ -1,0 +1,1 @@
+{"version":3,"sources":["home/home.js"],"names":[],"mappings":";;;QACa,cAAc;;;;;;;AAAd,0BAAc,GACZ,SADF,cAAc,CACX,IAAI,EAAE;sCADT,cAAc;;AAEnB,oBAAI,CAAC,GAAG,CAAC,6BAA6B,CAAC,CAAC;aAC3C","file":"home/home.js","sourcesContent":["\r\nexport class HomeController {\r\n    constructor($log) {\r\n        $log.log(\"Creating HomeController ...\");\r\n    }\r\n}"],"sourceRoot":"/source/"}

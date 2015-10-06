@@ -1,0 +1,22 @@
+{
+  "name": "ts15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.5",
+      "bootstrap": "github:twbs/bootstrap@^3.3.5",
+      "core-js": "npm:core-js@^1.2.1"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.0-dev.20150818"
+    }
+  }
+}

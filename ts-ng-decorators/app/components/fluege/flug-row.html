@@ -1,0 +1,7 @@
+<tr ng-class="{ info: vm.flug.id == vm.selected.id }">
+	<td>{{vm.flug.id}}</td>
+	<td>{{vm.flug.abflugort}}</td>
+	<td>{{vm.flug.zielort}}</td>
+	<td>{{vm.flug.datum | date:short}}</td>
+	<td><a href='javascript:void(0)' ng-click='vm.select()'>Auswählen</a></td>
+</tr>

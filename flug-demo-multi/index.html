@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="jspm_packages/github/twbs/bootstrap@3.3.4/css/bootstrap.min.css">
+      
+    <style>
+        body {
+            padding-top: 75px;
+        }
+    </style>
+      
+  </head>
+    
+    <body ng-controller="AppController as app">
+
+    <!-- NAVBAR -->
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Flug-App</a>
+
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{active: false}"><a ng-link="home">Home</a></li>
+                    <li ng-class="{active: false}"><a ng-link="flugBuchen">Flug Buchen</a></li>
+                    <li><a href="javascript:alert('Aua!')">Was anderes</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- /NAVBAR -->
+
+    <div>
+        <div ng-viewport></div>
+    </div>
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+        System.import('app').catch(console.error.bind(console));
+    </script>
+  </body>
+</html>

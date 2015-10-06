@@ -1,0 +1,47 @@
+<div>
+
+    <h4>Flug auswählen</h4>
+    <hr />
+
+    <div class="form-group">
+            <label for="FlugNummer">FlugNummer</label>
+            <input ng-model="flugBuchen.flugNrFilter" placeholder="FlugNummer" class="form-control" />
+    </div>
+    
+    <div class="form-group">
+        <label for="Von">Von</label>
+        <input ng-model="flugBuchen.flugVonFilter" placeholder="Von" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Nach">Nach</label>
+        <input ng-model="flugBuchen.flugNachFilter" placeholder="Nach" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="button" value="Suchen" ng-click="flugBuchen.loadFluege()" class="btn btn-default" />
+    </div>
+
+    <div>
+
+        <table ng-show="flugBuchen.fluege.length > 0" class="table">
+            <tr>
+                <th>Id</th>
+                <th>Abflugort</th>
+                <th>Zielort</th>
+                <th>Datum</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="f in flugBuchen.fluege" ng-class="{ info: f.id == flugBuchen.selectedFlug.id }">
+                <td>{{f.id}}</td>
+                <td>{{f.abflugort}}</td>
+                <td>{{f.zielort}}</td>
+                <td>{{f.datum | date:short}}</td>
+                <td><a href="javascript:void(0)" ng-click="flugBuchen.selectFlug(f)">Auswählen</a></td>
+            </tr>
+        </table>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,60 @@
+<!--index.html -->
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="jspm_packages/github/twbs/bootstrap@3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container" ng-controller="flugVM as vm">
+
+
+    <h1>Flug auswählen</h1>
+    <hr />
+
+    <div class="form-group">
+        <label for="Von">Von</label>
+        <input ng-model="vm.flugVonFilter" placeholder="Von" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Nach">Nach</label>
+        <input ng-model="vm.flugNachFilter" placeholder="Nach" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="button" value="Suchen" ng-click="vm.loadFluege()" class="btn btn-default" />
+    </div>
+
+    <div>
+
+        <table ng-show="vm.fluege.length > 0" class="table">
+            <tr>
+                <th>Id</th>
+                <th>Abflugort</th>
+                <th>Zielort</th>
+                <th>Datum</th>
+                <th></th>
+            </tr>
+            <!--
+            <tr ng-repeat="f in vm.fluege" ng-class="{ info: f.id == vm.selectedFlug.id }">
+                <td>{{f.id}}</td>
+                <td>{{f.abflugort}}</td>
+                <td>{{f.zielort}}</td>
+                <td>{{f.datum | date:short}}</td>
+                <td><a href="javascript:void(0)" ng-click="vm.selectFlug(f)">Auswählen</a></td>
+            </tr>
+            -->
+            <tr flug-row ng-repeat="f in vm.fluege"  flug="f" selected="vm.selectedFlug"></flug-row>
+
+            
+        </table>
+
+    </div>
+
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+        <script>
+            System.import('app').catch(function(err) { console.error(err); });
+        </script>
+  </body>
+</html>

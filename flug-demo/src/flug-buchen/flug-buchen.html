@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="col-md-3">
+
+        <h4>Schritte</h4>
+
+        <!-- Steps -->
+        <div>
+            <ul class="nav nav-pills nav-stacked">
+                <li ng-class="{active: false}"><a ng-link="passagier">Passagier</a></li>
+                <li ng-class="{active: false}"><a ng-link="flug">Flug</a></li>
+                <li><a ng-link="buchen">Buchen</a></li>
+            </ul>
+        </div>
+        <!-- /Steps -->
+
+    </div>
+
+    <!-- Detail -->
+    <div class="col-md-9">
+
+        <!-- Box für Nachricht -->
+        <div>
+            <div ng-show="flugBuchen.message" class="alert alert-info">
+                <div style="float:right">
+                    <a href="javascript:void(0);" ng-click="flugBuchen.message = ''"><span class="glyphicon glyphicon-remove"></span></a>
+                </div>
+                <div>{{ flugBuchen.message }}</div>
+            </div>
+        </div>
+        <!-- / Box für Nachricht -->
+
+        <!-- Platzhalter für View -->
+        <div ng-viewport></div>
+        <!-- /Platzhalter für View -->
+
+    </div>
+    <!-- /Detail -->
+
+</div>
+
+

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="jspm_packages/github/twbs/bootstrap@3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container" ng-controller="demoVM as vm">
+        <h1>Angular-ES6-Demo</h1>
+
+        <p>{{vm.info}}</p>
+
+        <p>
+          <a href="#" ng-click="vm.doStuff()">Do Stuff!</a>
+        </p>
+        
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+        <script>
+            System.import('app').catch(function(err) { console.error(err); });
+        </script>
+  </body>
+</html>

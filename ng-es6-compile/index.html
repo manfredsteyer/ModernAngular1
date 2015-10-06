@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="jspm_packages/github/twbs/bootstrap@3.3.4/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container" ng-controller="demoVM as vm">
+        <h1>Angular-ES6-Demo mit Babel und Gulp</h1>
+
+        <p>{{vm.info}}</p>
+        
+        <p><a href="" ng-click="vm.load()">Anzahl an Flüge ermitteln</a></p>
+        <p>{{vm.flugCount}}</p>
+        
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+        <script>
+            System.import('app').catch(console.error.bind(console));
+        </script>
+  </body>
+</html>

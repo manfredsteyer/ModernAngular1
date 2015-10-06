@@ -1,0 +1,66 @@
+<div>
+
+    <h4>Passagier auswählen</h4>
+    <hr />
+    
+    <div>
+        <form name="form" role="form">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input name="PassagierNameFilter" ng-model="flugBuchen.passagierNameFilter" class="form-control" placeholder="Nachname" />
+            </div>
+
+            <div class="form-group">
+                <label for="PassagierNrFilter">Passagier-Nr.</label>
+                <input name="PassagierNrFilter" ng-model="flugBuchen.passagierNrFilter" class="form-control" placeholder="Passagier-Nummer" />
+            </div>
+
+            <div class="form-group">
+                <input type="button" class="btn btn-default" value="Suchen" ng-click="flugBuchen.loadPassagiere()" />
+            </div>
+
+        </form>
+    </div>
+
+    <div>
+
+
+        <div class="table-responsive">
+            <table ng-show="flugBuchen.passagiere.length &gt; 0" class="table">
+                <tr>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                    <th>Geburtsdatum</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+
+                <tbody>
+
+                    <tr ng-repeat="p in flugBuchen.passagiere" ng-class="{ info: flugBuchen.selectedPassagier.id === p.id }">
+                        <td>{{p.vorname}}</td>
+                        <td>{{p.name}}</td>
+                        <td>{{p.geburtsdatum | date:'shortDate' }}</td>
+                        <td>{{p.passagierStatus}}</td>
+                        <td>
+                            <a href="javascript:void(0);" ng-click="flugBuchen.selectPassagier(p)">Auswählen</a> |
+                            <a href="javascript:void(0);" ng-link="passagierEdit({id: p.id})">Bearbeiten</a>
+
+                            <!--
+                                Passagier: 17
+                                Template: #/flugbuchen/passagier-edit/:id
+                                Link: #/flugbuchen/passagier-edit/17
+                            -->
+
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+</div>

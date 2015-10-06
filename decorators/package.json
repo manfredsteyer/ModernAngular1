@@ -1,0 +1,8 @@
+{
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "reflect-metadata": "npm:reflect-metadata@^0.1.2"
+    }
+  }
+}

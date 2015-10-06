@@ -1,0 +1,1 @@
+{"version":3,"sources":["flug/flug.js"],"names":[],"mappings":";;;MAAa,cAAc;;;;;;;AAAd,oBAAc,YAAd,cAAc;8BAAd,cAAc","file":"flug/flug.js","sourcesContent":["export class FlugController {\r\n}"],"sourceRoot":"/source/"}
